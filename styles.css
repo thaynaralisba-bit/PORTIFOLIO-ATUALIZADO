@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  crossorigin 'Cactus Classical Serif', serif;
+    background-color: black;
+
+   
+}
+section{
+
+justify-items: center;
+
+}
+h1{
+    color: #b8ae9e;
+
+}
+h2{
+    color: #b8ae9e;
+}
+h3{
+    color: #b8ae9e;
+}
+p{
+    color: #b8ae9e;
+}
