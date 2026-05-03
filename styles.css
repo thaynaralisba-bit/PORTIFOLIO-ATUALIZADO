@@ -4,12 +4,23 @@
   box-sizing: border-box;
   /* Corrigi a sintaxe da fonte aqui */
   font-family: 'Cactus Classical Serif', serif;
+
 }
 
 body {
   margin: 0;
-  min-height: 100vh; /* Use min-height para o fundo não cortar */
-  background: #a48ada;
+  min-height: 100vh;
+  /* Use min-height para o fundo não cortar */
+  background: #b76e79;
+
+  margin: 0;
+  min-height: 100vh;
+  /* A cor principal fica por baixo */
+  background-color: #b76e79;
+  /* O gradiente cria a sombra nos cantos */
+  background-image: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+  background-attachment: fixed;
+
 }
 
 header {
@@ -19,7 +30,7 @@ header {
   padding: 20px 40px;
   z-index: 1000;
   /* Background leve para o menu não sumir no conteúdo */
-  background: rgba(164, 138, 218, 0.8); 
+  background: lab(71.56% 28.67 14.09 / 0.219);
   backdrop-filter: blur(5px);
   width: 100%;
   text-align: right;
@@ -31,12 +42,23 @@ header a {
   margin-left: 20px;
   font-size: 20px;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 header a:hover {
-  color: #fff; 
+  color: #fff;
 
+}
+
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  margin-top: 10%;
+  object-fit: cover;
 }
 
 section {
@@ -45,38 +67,150 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  min-height: 80vh; /* Ocupa quase a tela toda */
+
+  min-height: 80vh;
+  /* Ocupa quase a tela toda */
   text-align: center;
   padding: 20px;
   line-height: 1.6;
-  letter-spacing: 4px; /* Ajustado para melhor leitura */
+  letter-spacing: 4px;
+  /* Ajustado para melhor leitura */
 }
 
 .meu-nome {
-  font-size: 60px; /* Aumentei para dar destaque */
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.575);
-  color: #000000;
+  font-size: 60px;
+  /* Aumentei para dar destaque */
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.678);
+  color: #f7e4ab;
   text-transform: uppercase;
   margin: 10px 0;
   display: block;
   width: 100%;
+  font-weight: bold;
 }
 
-h4, h5 {
+h4,
+h5 {
   font-weight: normal;
   letter-spacing: 2px;
 }
-h4{
+
+h4 {
   font-size: 20px;
   letter-spacing: 3px;
 }
 
+.paragrafo {
+  text-align: center;
+  font-size: 1.5rem;
+
+}
+
 /* Container de Sobre Mim que você criou no HTML */
-.container-direita, .container-esquerda {
+.container-direita,
+.container-esquerda {
   max-width: 800px;
   margin: 40px auto;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+
+}
+
+div {
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vem-conversar:first-child {
+
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.575);
+  text-transform: uppercase;
+  color: #fff;
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.centralizar-texto {
+  text-align: center;
+}
+
+h6 {
+  text-align: center;
+  margin-top: 10%;
+}
+
+@media (max-width:400px) {
+  header {
+    padding: 10px 10px;
+    align-items: center;
+  }
+
+  header a {
+    font-size: 16px;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+    margin-top: 30%;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  .meu-nome {
+    font-size: 40px;
+  }
+
+  h4,
+  h5 {
+    font-size: 16px;
+  }
+
+  .paragrafo {
+    font-size: 1.2rem;
+  }
+
+  .container-direita,
+  .container-esquerda {
+    padding: 10px;
+  }
+
+  div {
+    padding: 10px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vem-conversar:first-child {
+    font-size: 30px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
 }
