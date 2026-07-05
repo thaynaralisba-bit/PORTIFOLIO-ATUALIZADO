@@ -265,6 +265,11 @@ a {
   transition: color 0.6s ease;
 }
 
+.div-de-telefone{
+  text-align: center;
+  margin-top: 20px;
+}
+
 .centralizar-texto { text-align: center; }
 
 /* ===================================================
